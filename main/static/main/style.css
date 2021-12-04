@@ -1,0 +1,37 @@
+/* Styling for templates */
+
+.homeContainer {
+  margin: auto;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.homeContainer > h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.homeContainer > p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: darkcyan;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+form > button {
+  margin: 1.5rem 0;
+}
+
+.form-div > h1 {
+  margin: 1rem 0;
+  color: firebrick;
+}
+
+.task-container {
+  margin-top: 1.5rem;
+}
+.task-container > h1 {
+  text-align: center;
+  color: tomato;
+}
+.info-container {
+  margin-top: 1.5rem;
+}

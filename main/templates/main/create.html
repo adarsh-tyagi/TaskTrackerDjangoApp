@@ -1,0 +1,31 @@
+{% extends 'main/index.html' %} 
+
+{% block content %}
+
+<div class="container task-container">
+  <h1>New Task</h1>
+
+  {% if error %} 
+    <div class="alert alert-danger">
+      <i class="fa fa-exclamation"></i> {{error}} 
+    </div>
+  {% endif %}
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        placeholder="add your task"
+        required
+        class="form-control"
+      />
+    </div>
+    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Save</button>
+  </form>
+</div>
+
+{% endblock %}

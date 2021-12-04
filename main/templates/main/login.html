@@ -1,0 +1,33 @@
+{% extends 'main/index.html' %}
+
+{% block content %}
+
+<div class="container form-div">
+
+    <h1>Login</h1>
+    {% if error %}
+        <div class="alert alert-danger">
+            <i class="fa fa-exclamation"></i> {{error}}
+        </div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" id="username" placeholder="Enter your username" required class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required class="form-control"/>
+        </div>
+        <button type="submit" class="btn btn-outline-success"><i class="fa fa-sign-in"></i> Login</button>
+    </form>
+
+    <div>
+        Need an account? <a href="/register" class="badge bg-warning">Register here</a>
+    </div>
+
+</div>
+
+{% endblock %}
